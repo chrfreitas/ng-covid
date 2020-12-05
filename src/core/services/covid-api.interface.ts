@@ -13,4 +13,3 @@ export interface ICountryStatus {
   Status: string;
   Date: string;
 }
-

@@ -3,11 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports: [
-    HttpClientModule
-  ],
+  imports: [HttpClientModule],
   exports: [],
   declarations: [],
   providers: [],
 })
-export class CoreModule { }
+export class CoreModule {}

@@ -6,13 +6,11 @@ import { environment } from '../../environments/environment';
 import { ICountry, ICountryStatus } from './covid-api.interface';
 import { COVID_API_ROUTE } from './covid-api.routes';
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class CovidApiService {
   public readonly BASE_URL: string = environment.apiUrl;
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) {}
 
   public getCountries(): Observable<ICountry> {
     const countryUrl = `${this.BASE_URL}/${COVID_API_ROUTE.COUNTRIES}`;
