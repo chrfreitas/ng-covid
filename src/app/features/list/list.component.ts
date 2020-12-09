@@ -10,11 +10,11 @@ import { ICountry } from '../../../core/services/covid-api.interface';
   styleUrls: ['./list.component.scss'],
 })
 export class ListFeatureComponent implements OnInit {
+  public countries$: Observable<ICountry[]> | null = null;
+
   constructor(private covidApiService: CovidApiService) {}
 
-  ngOnInit() {}
-
-  public getCountries(): Observable<ICountry> {
-    return this.covidApiService.getCountries();
+  ngOnInit() {
+    this.countries$ = this.covidApiService.getCountries();
   }
 }

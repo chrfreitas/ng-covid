@@ -12,9 +12,9 @@ export class CovidApiService {
 
   constructor(private http: HttpClient) {}
 
-  public getCountries(): Observable<ICountry> {
+  public getCountries(): Observable<ICountry[]> {
     const countryUrl = `${this.BASE_URL}/${COVID_API_ROUTE.COUNTRIES}`;
-    return this.http.get<ICountry>(countryUrl);
+    return this.http.get<ICountry[]>(countryUrl);
   }
 
   public getCountryStatus(country: string): Observable<ICountryStatus> {

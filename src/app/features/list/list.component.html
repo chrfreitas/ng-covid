@@ -1,7 +1,5 @@
-<div *ngFor="let country of getCountries() | async; else loading">
-    {{country.Country}}
+<div *ngFor="let country of countries$ | async; else: loading">
+  {{ country.Country }}
 </div>
 
-<ng-template #loading>
-  Loading ...
-</ng-template>
+<ng-template #loading> Loading ... </ng-template>
