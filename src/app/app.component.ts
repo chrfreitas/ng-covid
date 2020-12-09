@@ -1,15 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CovidApiService } from '../core/services/covid-api.service';
-
 @Component({
   selector: 'app-component',
-  template: '<div>Hello</div>',
+  template: '<div><app-list-component></app-list-component></div>',
 })
 export class AppComponent implements OnInit {
-  constructor(private covidApiService: CovidApiService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.covidApiService.getCountries().subscribe((a) => console.log(a));
-  }
+  ngOnInit(): void {}
 }

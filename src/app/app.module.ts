@@ -4,9 +4,10 @@ import { RouterModule } from '@angular/router';
 
 import { CoreModule } from '../core/core.module';
 import { AppComponent } from './app.component';
+import { ListFeatureComponent } from './features/list/list.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ListFeatureComponent],
   imports: [BrowserModule, RouterModule.forRoot([]), CoreModule],
   providers: [],
   bootstrap: [AppComponent],
